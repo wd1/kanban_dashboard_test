@@ -4,7 +4,7 @@ TO DO:
 
 1. Fork it.
 2. Clone the project.
-3. Create `config/master.key` file and put the key (your should get if from manager)
+3. Create `config/master.key` file and put the key (you have to get it from a manager)
 4. Create `.env` file and put
     ```
     LOCAL_DB_USR=<MYSQL USER>
