@@ -1,0 +1,16 @@
+%table.table.table-bordered.table-sm
+  %thead
+    %tr.table-dark
+      -@statuses.each do |status|
+        %td.text-center
+          =status.name.upcase
+  %tbody
+    %tr
+      -@statuses.each do |status|
+        %td{ class: status.name.gsub(/\s/, '-') }
+
+#rawKanbanTasks.d-none
+  = @tasks.map do |t|
+    %div{ task_id: t.id, task_name: t.name, task_status: t.status.name.gsub(/\s/, '-') }
+.fixed-bottom.p-3
+  =paginate @tasks
